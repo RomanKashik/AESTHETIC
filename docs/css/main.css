@@ -88,7 +88,7 @@ p {
   font-weight: 400;
   font-size: 17px;
   line-height: 29px;
-  max-width: 130px;
+  max-width: 140px;
   color: #101010;
 }
 
@@ -249,12 +249,20 @@ p {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 28px;
   background-color: #f9f9f9;
   min-width: 100px;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+}
+.dropdown-content:after {
+  content:'';
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 20px;
+
 }
 
 .dropdown-content a {
@@ -342,6 +350,27 @@ p {
 .btn:hover {
   background-color: transparent;
   color: #191919;
+
+}
+.btn-not-active {
+ cursor: default;
+ display: inline-block;
+  min-width: 215px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 9px 20px;
+  background-color: #191919;
+  border: 3px solid #191919;
+  border-radius: 100px;
 }
 
 .btn[type="submit"] {
@@ -775,7 +804,8 @@ p {
   margin-bottom: 100px;
 }
 
-.works .btn {
+.works .btn,
+.works .btn-not-active {
   margin-top: 50px;
 }
 
